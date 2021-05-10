@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <h1>Statistiche Juventus</h1>
+    <h3>Stagione 2020/2021</h3>
+
+    <div>
+    <a href="/partite"><h3>Partite</h3></a>
+    </div>
+
+    <div>
+    <a href="/giocatori"><h3>Giocatori</h3></a>
+    </div>
+</div>
+{% endblock %}

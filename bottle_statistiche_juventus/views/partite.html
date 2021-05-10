@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Partite{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Statistiche Juventus</h1>
+    <h3>Stagione 2020/2021</h3>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Squadra in casa</th>
+        <th>Squadra fuori casa</th>
+        <th>Risultato</th>
+        <th>Marcatori</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- CODICE PYTHON -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </tbody>
+  </table>
+  </div>
+  <div>
+      <a href="/partite/insert"><h3 class="btn btn-success">Inserisci partita</h3></a>
+  </div>
+  <br>
+  <div>
+      <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+  </div>
+</div>
+{% endblock %}

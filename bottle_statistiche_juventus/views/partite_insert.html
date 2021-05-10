@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Statistiche Juventus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Statistiche Juventus</h1>
+  <h3>Stagione 2020/2021</h3>
+  <br>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="casa">Squadra in casa:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="casa" placeholder="Squadra in casa" name="casa">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fuoricasa">Squadra fuori casa:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="fuoricasa" placeholder="Squadra fuori casa" name="fuoricasa">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="risultato">Risultato:</label>
+      <div class="col-sm-3">          
+        <input type="text" class="form-control" id="risultato" placeholder="Esempio: 0-0" name="risultato">
+      </div>
+    </div> 
+    <div class="form-group" id="source">
+      <label class="control-label col-sm-2" for="marcatore">Marcatore:</label>
+      <div class="col-sm-3">          
+        <input type="text" class="form-control" id="marcatore" placeholder="Marcatore Juventus" name="marcatore">
+        <input type="number" class="form-control" id="goal" placeholder="Goals" name="goal">
+      </div>
+    </div>
+    <div><p id="addition" onclick="duplicate()">Aggiungi</p></div>
+    <div class="form-group" id="destination"></div>
+
+    <script>
+    function duplicate () {
+      var source = document.getElementById("source"),
+          destination = document.getElementById("destination");
+
+      let evilclone = source.cloneNode(true);
+      evilclone.removeAttribute("id");
+      destination.appendChild(evilclone);
+    }
+    </script>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Inserisci</button>
+      </div>
+    </div>
+  </form>
+  <br>
+  <div>
+    <a href="/partite"><h3 class="footer">Indietro</h3></a>
+  </div>
+</div>
+</body>
+</html>

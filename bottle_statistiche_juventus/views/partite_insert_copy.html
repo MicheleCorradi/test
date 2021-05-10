@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Inserisci partita{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Statistiche Juventus</h1>
+  <h3>Stagione 2020/2021</h3>
+  <br>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="casa">Squadra in casa:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="casa" placeholder="Squadra in casa" name="casa">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fuoricasa">Squadra fuori casa:</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="fuoricasa" placeholder="Squadra fuori casa" name="fuoricasa">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="risultato">Risultato:</label>
+      <div class="col-sm-3">          
+        <input type="text" class="form-control" id="risultato" placeholder="Esempio: 0-0" name="risultato">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="num_marcatori">Numero Marcatori:</label>
+      <div class="col-sm-2">          
+        <input type="number" class="form-control" id="num_marcatori" name="num_marcatori">
+      </div>
+      <div class="col-sm-1">
+        <input type="button" id="username" value="Crea" onclick="create()"/>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Inserisci</button>
+      </div>
+    </div>
+
+  </form>
+  <br>
+  <div>
+    <a href="/partite"><h3 class="footer">Indietro</h3></a>
+  </div>
+</div>
+{% endblock %}
